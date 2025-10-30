@@ -1,3 +1,6 @@
+body {
+  background-color: #ebc1c1;
+}
 #container, #buttonContainer, #firstRow, #secondRow, #thirdRow, #fourthRow, #fifthRow {
   display: flex;
 }
@@ -11,7 +14,7 @@
   background: linear-gradient(145deg, #f3a4a4, #ebc1c1);
   border-radius: 20px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1),
-    -10px -10px 30px rgba(255, 255, 255, 0.8);
+    -10px -10px 30px rgba(245, 209, 209, 0.8);
   padding: 10px;
   font-family: "Arial", sans-serif;
 }
