@@ -1,45 +1,49 @@
 body {
-  background-color: #ebc1c1;
-}
-#container, #buttonContainer, #firstRow, #secondRow, #thirdRow, #fourthRow, #fifthRow {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#container {
+.calculator,
+.buttons-container,
+.first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.calculator {
   flex-direction: column;
   align-items: space-between;
-  width: 320px;
-  height: 450px;
-  margin: 50px auto;
+  width: 25%;
   background: linear-gradient(145deg, #f3a4a4, #ebc1c1);
   border-radius: 20px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1),
     -10px -10px 30px rgba(245, 209, 209, 0.8);
-  padding: 10px;
+  padding: 0.5rem;
   font-family: "Arial", sans-serif;
 }
-
-#display {
+.display {
   background-color: #f8f9fa;
-  width: auto;
-  height: 60px;
-  margin: 15px 0;
+  min-height: 50px;
   padding: 10px;
   text-align: right;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   border: none;
   border-radius: 10px;
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.05),
     inset -5px -5px 10px rgba(241, 64, 64, 0.8);
   overflow: hidden;
 }
-
-#buttonContainer {
+.buttons-container {
   flex-direction: column;
+  gap: 0.5rem;
 }
-
 button {
-  margin: 3px;
   background: linear-gradient(145deg, #f0f0f0, #e6e6e6);
   border: none;
   border-radius: 10px;
@@ -52,19 +56,19 @@ button {
     -5px -5px 10px rgba(242, 122, 122, 0.8);
   flex: 1;
 }
-
 button:hover {
   background: linear-gradient(145deg, #e6e6e6, #f0f0f0);
   transform: translateY(-2px);
 }
-
 button:active {
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
     inset -5px -5px 10px rgba(255, 255, 255, 0.8);
   transform: translateY(0);
 }
-
-.operator, #equalsTo, #clear, #delete {
+.operator,
+#equalsTo,
+#clear,
+#delete {
   background: linear-gradient(145deg, #ec6b7c, #c8d0e0);
 }
 
@@ -72,5 +76,14 @@ button:active {
   color: #333;
 }
 
+@media (max-width: 1100px) {
+  .calculator {
+    width: 30%;
+  }
+}
 
- 
+@media (max-width: 800px) {
+  .calculator {
+    width: 60%;
+  }
+}
